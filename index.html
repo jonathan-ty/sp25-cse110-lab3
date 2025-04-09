@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <title>CSE101 Group 5</title>
+    <meta />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
   <main>
-    <head>
-      <meta charset="UTF-8" />
-      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-      <title>CSE101 Group 5</title>
-    </head>
     <body>
       <header>
         <h1>Meeting Minutes</h1>
@@ -240,7 +240,7 @@
           <label for="date">Date of Form</label>
           <input type="date" name="date" id="date" required />
         </div>
-        <br />
+
         <div>
           <label for="employee-type">What is your role at the company?</label>
           <input
@@ -250,20 +250,16 @@
             required
           />
         </div>
-        <br />
         <div>
           <label for="name">Enter your name: </label>
           <input type="text" name="name" id="name" required />
         </div>
-        <br />
         <div>
           <label for="email">Enter your email: </label>
           <input type="email" name="email" id="email" required />
         </div>
-        <br />
         <div>
           <label for="feedback">What do you think of the formatting?</label>
-          <br />
           <textarea
             id="feedback"
             name="feedback"
@@ -272,7 +268,6 @@
             required
           ></textarea>
         </div>
-        <br />
         <div>
           <label>Do you consent to having your response be publicized?</label>
           <label
@@ -280,8 +275,6 @@
           >
           <label><input type="radio" name="radio" value="no" />No</label>
         </div>
-        <br />
-
         <button type="submit">Submit Form</button>
         <button type="reset" class="reset-button">Reset Form</button>
 
