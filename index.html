@@ -4,47 +4,45 @@
   <head>
     <title>CSE101 Group 5</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
   </head>
   <main>
     <header>
-      <h1>Meeting Minutes</h1>
-      <h3>
-        This is a simple HTML webpage that represents the meeting minutes for a
-        sample team. Meeting minutes are notes recording during a meeting so
-        that anyone who missed the meeting can easily catch up, or if someone
-        needs to reference back to a meeting that happened a little while ago
-        they can job their memory.
-      </h3>
-      <hr />
-      <nav id="main-nav">
-        <h2>Table of Contents</h2>
-        <ul>
-          <li>
-            <h3><a href="#Meeting1">Meeting 1</a></h3>
-          </li>
-          <li>
-            <h3><a href="#Meeting2">Meeting 2</a></h3>
-          </li>
-          <li>
-            <h3><a href="#Meeting3">Meeting 3</a></h3>
-          </li>
-          <li>
-            <h3><a href="#Meeting4">Meeting 4</a></h3>
-          </li>
-          <li>
-            <h3><a href="#Meeting5">Meeting 5</a></h3>
-          </li>
-        </ul>
+      <div class="hero">
+        <h1>Meeting Minutes</h1>
+      </div>
+      <nav>
+        <h2 style="text-align: center">Table of Contents</h2>
+        <div id="nav_bar">
+          <h3><a href="#Meeting1">Meeting 1</a></h3>
+          <h3><a href="#Meeting2">Meeting 2</a></h3>
+          <h3><a href="#Meeting3">Meeting 3</a></h3>
+          <h3><a href="#Meeting4">Meeting 4</a></h3>
+          <h3><a href="#Meeting5">Meeting 5</a></h3>
+        </div>
       </nav>
     </header>
 
     <section>
       <div>
-        <h2 id="Meeting1">Meeting 1</h2>
+        <h2 id="Meeting1" style="margin: 0rem">Meeting 1</h2>
         <h4>Brainstorming • January 1, 2025</h4>
-        <h5>Present Members: Bob, MacKenzie, Jeffrey, Miranda, John</h5>
-        <h5>Absent Members: Samantha, Penelopy, Ember, Trixie</h5>
+        <h4>Present Members:</h4>
+        <div class="member-tokens">
+          <h5>Bob</h5>
+          <h5>MacKenzie</h5>
+          <h5>Jeffrey</h5>
+          <h5>Miranda</h5>
+          <h5>John</h5>
+        </div>
+        <h4>Absent Members:</h4>
+        <div class="member-tokens">
+          <h5>Samantha</h5>
+          <h5>Penelopy</h5>
+          <h5>Ember</h5>
+          <h5>Trixie</h5>
+        </div>
       </div>
       <div>
         <p>
@@ -83,14 +81,25 @@
         >
       </div>
     </section>
-    <br />
-    <hr />
     <section>
       <div>
         <h2 id="Meeting2">Meeting 2</h2>
         <h4>Brainstorming • January 14, 2025</h4>
-        <h5>Present Members: MacKenzie, Jeffrey, Penelopy, Ember</h5>
-        <h5>Absent Members: Samantha, Miranda, John, Trixie, Bob</h5>
+        <h4>Present Members:</h4>
+        <div class="member-tokens">
+          <h5>MacKenzie</h5>
+          <h5>Jeffrey</h5>
+          <h5>Penelopy</h5>
+          <h5>Ember</h5>
+        </div>
+        <h4>Absent Members:</h4>
+        <div class="member-tokens">
+          <h5>Samantha</h5>
+          <h5>Miranda</h5>
+          <h5>John</h5>
+          <h5>Trixie</h5>
+          <h5>Bob</h5>
+        </div>
       </div>
       <div>
         <p>
@@ -132,12 +141,16 @@
             >.
           </li>
         </ul>
-        <img
-          src="assets/1906-Lodge-Coronado-1024x683.jpg"
-          alt="San Diego farmers markets featuring the Coronado Farmers Market at the Ferry Landing"
-          width="600"
-          height="400"
-        />
+        <div class="img-container">
+          <img
+            src="assets/1906-Lodge-Coronado-1024x683.jpg"
+            alt="San Diego farmers markets featuring the Coronado Farmers Market at the Ferry Landing"
+          />
+          <img
+            src="assets/1906-Lodge-Coronado-1024x683.jpg"
+            alt="San Diego farmers markets featuring the Coronado Farmers Market at the Ferry Landing"
+          />
+        </div>
       </div>
       <div>
         <p>
@@ -164,14 +177,17 @@
       <div>
         <b>Miscellaneous Material:</b>
       </div>
-      <img src="assets/image0.jpeg" alt="Diagram" width="600" height="400" />
-      <video controls width="600" height="400">
-        <source src="assets/celsius.mp4" type="video/mp4" />
-      </video>
-      <figure>
-        <figcaption>Meeting Recording</figcaption>
-        <audio controls src="assets/audio.mp3"></audio>
-      </figure>
+      <div class="img-container">
+        <img src="assets/image0.jpeg" alt="Diagram"/>
+        <video controls width="600" height="400">
+          <source src="assets/celsius.mp4" type="video/mp4"/>
+        </video>
+        <figure>
+          <figcaption>Meeting Recording</figcaption>
+          <audio controls src="assets/audio.mp3"></audio>
+        </figure>
+      </div>
+
       <details>
         <summary><b>Meeting Notes</b></summary>
         <p>
@@ -180,14 +196,25 @@
         </p>
       </details>
     </section>
-    <br />
-    <hr />
     <section>
       <div>
         <h2 id="Meeting3">Meeting 3</h2>
-        <h4>Experimenting • January 1, 2025</h4>
-        <h5>Present Members: Bob, MacKenzie, Jeffrey, Miranda, John</h5>
-        <h5>Absent Members: Samantha, Penelopy, Ember, Trixie</h5>
+        <h4>Brainstorming • January 1, 2025</h4>
+        <h4>Present Members:</h4>
+        <div class="member-tokens">
+          <h5>Bob</h5>
+          <h5>MacKenzie</h5>
+          <h5>Jeffrey</h5>
+          <h5>Miranda</h5>
+          <h5>John</h5>
+        </div>
+        <h4>Absent Members:</h4>
+        <div class="member-tokens">
+          <h5>Samantha</h5>
+          <h5>Penelopy</h5>
+          <h5>Ember</h5>
+          <h5>Trixie</h5>
+        </div>
       </div>
       <div>
         <p>
@@ -196,14 +223,25 @@
         </p>
       </div>
     </section>
-    <br />
-    <hr />
     <section>
       <div>
         <h2 id="Meeting4">Meeting 4</h2>
-        <h4>Feedback and Action Plan • January 1, 2025</h4>
-        <h5>Present Members: Bob, MacKenzie, Jeffrey, Miranda, John</h5>
-        <h5>Absent Members: Samantha, Penelopy, Ember, Trixie</h5>
+        <h4>Brainstorming • January 1, 2025</h4>
+        <h4>Present Members:</h4>
+        <div class="member-tokens">
+          <h5>Bob</h5>
+          <h5>MacKenzie</h5>
+          <h5>Jeffrey</h5>
+          <h5>Miranda</h5>
+          <h5>John</h5>
+        </div>
+        <h4>Absent Members:</h4>
+        <div class="member-tokens">
+          <h5>Samantha</h5>
+          <h5>Penelopy</h5>
+          <h5>Ember</h5>
+          <h5>Trixie</h5>
+        </div>
       </div>
       <div>
         <p>
@@ -212,14 +250,25 @@
         </p>
       </div>
     </section>
-    <br />
-    <hr />
     <section>
       <div>
         <h2 id="Meeting5">Meeting 5</h2>
-        <h4>Execution • January 1, 2025</h4>
-        <h5>Present Members: Bob, MacKenzie, Jeffrey, Miranda, John</h5>
-        <h5>Absent Members: Samantha, Penelopy, Ember, Trixie</h5>
+        <h4>Brainstorming • January 1, 2025</h4>
+        <h4>Present Members:</h4>
+        <div class="member-tokens">
+          <h5>Bob</h5>
+          <h5>MacKenzie</h5>
+          <h5>Jeffrey</h5>
+          <h5>Miranda</h5>
+          <h5>John</h5>
+        </div>
+        <h4>Absent Members:</h4>
+        <div class="member-tokens">
+          <h5>Samantha</h5>
+          <h5>Penelopy</h5>
+          <h5>Ember</h5>
+          <h5>Trixie</h5>
+        </div>
       </div>
       <div>
         <p>
@@ -228,8 +277,6 @@
         </p>
       </div>
     </section>
-    <br />
-    <hr />
   </main>
   <footer>
     <h3>Feedback Form</h3>
