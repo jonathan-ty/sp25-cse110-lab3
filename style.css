@@ -33,7 +33,7 @@ h3 + p {
 }
 
 div:has(img) {
-  border: 2px solid red;
+  border: 0px solid red;
 }
 
 li,
@@ -114,7 +114,7 @@ h3 a:hover {
 
 h3 a {
   padding: 0.01px 10px; /* Absolute Unit #1 */
-  transition: duration 500ms;
+  transition: 500ms;
 }
 
 .member-tokens {
@@ -201,10 +201,10 @@ div[class*="container"] {
     font-size: 2.5rem;
   }
 
-  ul, ol {
+  ul,
+  ol {
     li {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
   }
-
 }
