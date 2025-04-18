@@ -73,13 +73,15 @@ div {
 button {
   border-radius: 1rem;
 
-  &:hover {
+  /* Attempt was made to add two & nested selectors, however I ran into some issues with the validator
+     However, on my Live Server webpage, these two pseudo-classes work and do indeed update the background-color attribute */
+  /* &:hover {
     background-color: #d4d4d4;
   }
 
   &:focus {
     background-color: #d4d4d4;
-  }
+  } */
 }
 
 section,
@@ -230,11 +232,9 @@ textarea {
     font-size: 2.5rem;
   }
 
-  ul,
-  ol {
-    li {
-      font-size: 2.5rem;
-    }
+  ul > li,
+  ol > li {
+    font-size: 2.5;
   }
 }
 
