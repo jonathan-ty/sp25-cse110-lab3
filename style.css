@@ -231,11 +231,6 @@ textarea {
   ol > li {
     font-size: 2.5rem;
   }
-
-  ul > li,
-  ol > li {
-    font-size: 2.5;
-  }
 }
 
 /* Combining two selectors: h3 with the class 'member-tokens' */
