@@ -4,10 +4,12 @@
   --main-font: "DM Sans";
 }
 
-img {
+img,
+video {
   border-radius: 2rem;
   padding: 1rem 0rem;
   width: auto;
+  filter: drop-shadow(0.25rem 0.5rem 0.25rem #949494);
 }
 
 video {
@@ -25,7 +27,7 @@ body {
 }
 
 h3 ~ p {
-  color: blue;
+  color: rgb(0, 0, 0);
 }
 
 h3 + p {
@@ -33,7 +35,7 @@ h3 + p {
 }
 
 div:has(img) {
-  border: 0px solid red;
+  opacity: 1;
 }
 
 li,
@@ -68,7 +70,20 @@ div {
   position: static; /* Position attribute used */
 }
 
-section {
+button {
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: #d4d4d4;
+  }
+
+  &:focus {
+    background-color: #d4d4d4;
+  }
+}
+
+section,
+footer {
   background-color: hsl(45, 29%, 97%);
   padding: 1rem 2rem;
   margin: 1rem 2rem;
@@ -160,6 +175,16 @@ div[class*="container"] {
   background-color: hsl(45, 29%, 97%);
 }
 
+fieldset,
+input,
+textarea {
+  border-radius: 1rem;
+  border-color: black;
+  border-width: 0.05rem;
+  padding: 2rem;
+  margin: 1rem 0rem;
+}
+
 @media (max-width: 1250px) {
   h2,
   h3,
@@ -192,7 +217,11 @@ div[class*="container"] {
   h5,
   p,
   em,
-  b {
+  b,
+  label,
+  input,
+  legend,
+  button {
     font-size: 3rem;
   }
 
@@ -207,4 +236,14 @@ div[class*="container"] {
       font-size: 2.5rem;
     }
   }
+}
+
+/* Combining two selectors: h3 with the class 'member-tokens' */
+h3.member-tokens {
+  color: darkblue;
+  text-transform: uppercase;
+}
+
+h4:has(+ h4) {
+  margin-bottom: 0;
 }
