@@ -1,192 +1,240 @@
+/* Importing the DM Sans font from Google Fonts */
+/* Requirement: Include and use a third-party font */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+/* Setting a custom CSS variable for the main font */
+/* Requirement: CSS variables with fallbacks */
 * {
   --main-font: "DM Sans";
 }
 
+/* Styling for images and videos */
+/* Requirement: Border radius, padding, and drop-shadow */
 img,
 video {
-  border-radius: 2rem;
-  padding: 1rem 0rem;
-  width: auto;
-  filter: drop-shadow(0.25rem 0.5rem 0.25rem #949494);
+  border-radius: 2rem; /* Rounded corners */
+  padding: 1rem 0rem; /* Vertical padding */
+  width: auto; /* Maintain aspect ratio */
+  filter: drop-shadow(0.25rem 0.5rem 0.25rem #949494); /* Adding a shadow effect */
 }
 
+/* Ensuring videos maintain their aspect ratio */
+/* Requirement: Element selector */
 video {
   width: auto;
 }
 
+/* Setting smooth scrolling and limiting the maximum width of the page */
+/* Requirement: Use relative units (max-width) */
 html {
-  scroll-behavior: smooth;
-  max-width: 100vw;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  max-width: 100vw; /* Limit maximum width */
 }
 
+/* Styling for the body element */
+/* Requirement: Use CSS variables and font-family */
 body {
-  font-family: var(--main-font, sans-serif);
-  margin: 0;
+  font-family: var(--main-font, sans-serif); /* Using the custom font variable */
+  margin: 0; /* Removing default margin */
 }
 
+/* Styling for paragraphs that are general siblings of h3 */
+/* Requirement: General sibling combinator */
 h3 ~ p {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); /* Black text color */
 }
 
+/* Styling for paragraphs that are adjacent siblings of h3 */
+/* Requirement: Adjacent sibling combinator */
 h3 + p {
-  font-weight: bold;
+  font-weight: bold; /* Bold text */
 }
 
+/* Styling for div elements containing an img */
+/* Requirement: :has() selector */
 div:has(img) {
-  opacity: 1;
+  opacity: 1; /* Ensures full opacity */
 }
 
+/* Styling for list items and links */
+/* Requirement: Element selector and text-decoration */
 li,
 a {
-  color: black;
-  text-decoration: none;
+  color: black; /* Black text color */
+  text-decoration: none; /* Removing underline from links */
 }
 
+/* Removing the top margin for h3 elements */
+/* Requirement: Element selector */
 h3 {
   margin-top: 0;
 }
 
+/* Styling for h4 elements inside divs */
+/* Requirement: Descendant combinator */
 div h4 {
-  margin: 1rem 0rem;
+  margin: 1rem 0rem; /* Vertical margin */
 }
 
+/* Styling for all paragraph elements */
+/* Requirement: Element selector */
 p {
-  margin: 1rem 0rem;
+  margin: 1rem 0rem; /* Vertical margin */
 }
 
+/* Default styling for div elements */
+/* Requirement: Flexbox layout */
 div {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
+/* Styling for the hero section */
+/* Requirement: Background color and padding */
 .hero {
   width: auto;
   height: auto;
-  text-align: start;
-  background-color: olive;
-  padding: 0rem 2rem;
-  position: static; /* Position attribute used */
+  text-align: start; /* Align text to the start */
+  background-color: olive; /* Olive background color */
+  padding: 0rem 2rem; /* Horizontal padding */
+  position: static; /* Default positioning */
 }
 
+/* Styling for buttons */
+/* Requirement: Border radius */
 button {
-  border-radius: 1rem;
-
-  /* Attempt was made to add two & nested selectors, however I ran into some issues with the validator
-     However, on my Live Server webpage, these two pseudo-classes work and do indeed update the background-color attribute */
-  /* &:hover {
-    background-color: #d4d4d4;
-  }
-
-  &:focus {
-    background-color: #d4d4d4;
-  } */
+  border-radius: 1rem; /* Rounded corners */
 }
 
+/* Styling for sections and footers */
+/* Requirement: Use hsl() for colors, padding, and border radius */
 section,
 footer {
-  background-color: hsl(45, 29%, 97%);
-  padding: 1rem 2rem;
-  margin: 1rem 2rem;
-  border-radius: 1rem;
-  border: 0rem; /* Short-hand  notation */
-  border-left: 0rem; /* Long-hand  notation */
+  background-color: hsl(45, 29%, 97%); /* Light yellow background */
+  padding: 1rem 2rem; /* Padding */
+  margin: 1rem 2rem; /* Margin */
+  border-radius: 1rem; /* Rounded corners */
+  border: 0rem; /* No border */
+  border-left: 0rem; /* No left border */
 }
 
+/* Styling for navigation elements */
+/* Requirement: Flexbox layout */
 nav {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
+/* Styling for the main element */
+/* Requirement: Grid layout */
 main {
-  display: grid; /* Display #1 */
-  /* grid-template-columns: 100%; */
+  display: grid; /* Grid layout */
 }
 
+/* Styling for the navigation bar */
+/* Requirement: Flexbox layout and justify-content */
 #nav_bar {
-  display: flex; /* Display #1 */
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: rgb(250, 249, 246);
-  margin: 0rem 2rem; /* Short-hand  notation */
-  margin-left: 2rem; /* Long-hand  notation */
-  margin-right: 2rem; /* Long-hand  notation */
-  border-radius: 1rem;
-  flex-wrap: wrap;
-  padding: 0rem 1rem;
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Arrange children in a row */
+  justify-content: space-around; /* Space out children evenly */
+  background-color: rgb(250, 249, 246); /* Light background color */
+  margin: 0rem 2rem; /* Horizontal margin */
+  border-radius: 1rem; /* Rounded corners */
+  flex-wrap: wrap; /* Wrap children to the next line if needed */
+  padding: 0rem 1rem; /* Horizontal padding */
 }
 
+/* Styling for h3 elements inside the navigation bar */
+/* Requirement: Child combinator */
 #nav_bar h3 {
-  margin: 1rem 0rem;
-  padding: 0rem 1rem; /* Short-hand  notation */
-  padding-left: 1rem; /* Long-hand  notation */
-  padding-right: 1rem; /* Long-hand  notation */
+  margin: 1rem 0rem; /* Vertical margin */
+  padding: 0rem 1rem; /* Horizontal padding */
 }
 
+/* Styling for links inside h3 elements when hovered */
+/* Requirement: :hover pseudo-class */
 h3 a:hover {
-  background-color: #ebebeb;
-  border-radius: 1rem;
+  background-color: #ebebeb; /* Light gray background */
+  border-radius: 1rem; /* Rounded corners */
 }
 
+/* Styling for links inside h3 elements */
+/* Requirement: Transition for hover effects */
 h3 a {
-  padding: 0.01px 10px; /* Absolute Unit #1 */
-  transition: 500ms;
+  padding: 0.01px 10px; /* Padding */
+  transition: 500ms; /* Smooth transition for hover effects */
 }
 
+/* Styling for the member-tokens container */
+/* Requirement: Flexbox layout */
 .member-tokens {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Arrange children in a row */
+  align-items: center; /* Align children vertically */
 }
 
+/* Styling for h5 elements inside member-tokens */
+/* Requirement: Border radius and padding */
 .member-tokens h5 {
-  margin: 0.02px 0.5rem; /* Absolute Unit #2 */
-  background-color: #ececec;
-  border-radius: 1rem;
-  padding: 0.1rem 1rem;
-  text-align: center;
+  margin: 0.02px 0.5rem; /* Margin */
+  background-color: #ececec; /* Light gray background */
+  border-radius: 1em; /* Rounded corners */
+  padding: 0.1rem 1rem; /* Padding */
+  text-align: center; /* Center-align text */
 }
 
+/* Styling for the first h5 element inside member-tokens */
+/* Requirement: :first-child pseudo-class */
 .member-tokens h5:first-child {
-  margin: 0px; /* Absolute Unit #3 */
-  margin-right: 0.5rem;
-  border-radius: 1rem;
+  margin: 0px; /* No margin */
+  margin-right: 0.5rem; /* Right margin */
+  border-radius: 1rem; /* Rounded corners */
 }
 
+/* Styling for the image container */
+/* Requirement: Grid layout */
 .img-container {
-  /* Two children & three grid-related attributes */
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 50% 50%;
-  gap: 10px;
-  justify-content: stretch;
+  display: grid; /* Grid layout */
+  grid-template-columns: auto auto; /* Two columns */
+  grid-template-rows: 50% 50%; /* Two rows */
+  gap: 10px; /* Space between grid items */
+  justify-content: stretch; /* Stretch items to fill the container */
 }
 
+/* Styling for images inside the image container */
+/* Requirement: Block display and width */
 .img-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Block-level element */
 }
 
+/* Styling for h3 elements with the class member-tokens */
+/* Requirement: Combined selector */
 h3.member-tokens {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Uppercase text */
 }
 
+/* Styling for div elements with a class containing "container" */
+/* Requirement: Attribute selector */
 div[class*="container"] {
-  background-color: hsl(45, 29%, 97%);
+  background-color: hsl(45, 29%, 97%); /* Light yellow background */
 }
 
+/* Styling for fieldset, input, and textarea elements */
+/* Requirement: Border styling and padding */
 fieldset,
 input,
 textarea {
-  border-radius: 1rem;
-  border-color: black;
-  border-width: 0.05rem;
-  padding: 0rem 1rem;
-  margin: 1rem 0rem;
+  border-radius: 1rem; /* Rounded corners */
+  border-color: black; /* Black border */
+  border-width: 0.05rem; /* Thin border */
+  padding: 0rem 1rem; /* Horizontal padding */
+  margin: 1rem 0rem; /* Vertical margin */
 }
 
+/* Media query for screens smaller than 1250px */
+/* Requirement: Media query for responsiveness */
 @media (max-width: 1250px) {
   h2,
   h3,
@@ -196,22 +244,24 @@ textarea {
   li,
   em,
   b {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller font size */
   }
 
   .img-container,
   #nav_bar {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
   }
 
   #nav_bar h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0rem;
+    font-size: 2rem; /* Larger font size */
+    text-align: center; /* Center-align text */
+    margin: 0rem; /* No margin */
   }
 }
 
+/* Media query for screens larger than 1500px */
+/* Requirement: Media query for responsiveness */
 @media (min-width: 1500px) {
   h2,
   h3,
@@ -224,21 +274,24 @@ textarea {
   input,
   legend,
   button {
-    font-size: 3rem;
+    font-size: 3rem; /* Larger font size */
   }
 
   ul > li,
   ol > li {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Larger font size for list items */
   }
 }
 
-/* Combining two selectors: h3 with the class 'member-tokens' */
+/* Styling for h3 elements with the class member-tokens */
+/* Requirement: Combined selector */
 h3.member-tokens {
-  color: darkblue;
-  text-transform: uppercase;
+  color: darkblue; /* Dark blue text color */
+  text-transform: uppercase; /* Uppercase text */
 }
 
+/* Styling for h4 elements that are followed by another h4 */
+/* Requirement: :has() selector */
 h4:has(+ h4) {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Remove bottom margin */
 }
